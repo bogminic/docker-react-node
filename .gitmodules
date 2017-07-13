@@ -1,0 +1,6 @@
+[submodule "code/react-redux-realworld-example-app"]
+	path = code/react-redux-realworld-example-app
+	url = https://github.com/gothinkster/react-redux-realworld-example-app.git
+[submodule "code/node-express-realworld-example-app"]
+	path = code/node-express-realworld-example-app
+	url = https://github.com/gothinkster/node-express-realworld-example-app.git
