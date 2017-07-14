@@ -7,7 +7,7 @@ This exercise will take your React + Node code and deploy a containerized web ap
 Lets start and clone the repository:
 
 ```
-git clone https://github.com/bmnicolae/docker-react-node.git
+git clone --recursive https://github.com/bmnicolae/docker-react-node.git
 cd docker-react-node./
 ```
 
@@ -112,3 +112,32 @@ docker run -p 3000:8000 node-api
 Error?
 
 ## Docker compose
+
+In root folder we can find docker-compose.yml and let's review it:
+
+```
+version: '3'
+services:
+    db:
+        image: mongo
+         ports:
+            — “27017:27017”
+    backend:
+        image: node-api
+        ports:
+            - "8000:8000"
+        depends_on:
+            - db
+    frontend:
+        image: react-nginx
+        ports:
+            - "8080:8080"
+        depends_on:
+            - backend
+
+```
+
+... and up up up
+```
+docker-compose up
+```

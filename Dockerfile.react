@@ -1,0 +1,4 @@
+FROM nginx
+MAINTAINER b
+
+COPY build /usr/share/nginx/html
